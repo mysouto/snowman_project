@@ -20,12 +20,10 @@ def snowman(snowman_word):
     If the player wins and, 'Sorry, you lose! The word was {snowman_word}' if the player loses
     """
     # secret/snowman word selected in main.py file
-    # print(f"debug info: {snowman_word}")
 
     snowman_word_dict = build_word_dict(snowman_word)
     wrong_guesses_list = []
 
-    # flag to indicate if game is complete - conditions:
     word_complete = False
 
     while len(
@@ -54,11 +52,9 @@ def snowman(snowman_word):
 
     if word_complete == False:
         print(f"Sorry, you lose! The word was {snowman_word}")
-        # print(f"The word was {snowman_word}")
 
 
 def draw_snowman(wrong_guess_count):
-    # def print_snowman_graphic(num_wrong_guesses):
     """This function prints out the appropriate snowman image 
     depending on the number of wrong guesses the player has made.
     """
@@ -68,7 +64,6 @@ def draw_snowman(wrong_guess_count):
 
 
 def get_letter_from_user(wrong_guesses_list, letter_dict):
-    # def get_letter_from_user(snowman_word_dict, wrong_guesses_list):
     """This function takes the snowman_word_dict and the list of characters 
     that have been guessed incorrectly (wrong_guesses_list) as input.
     It asks for input from the user of a single character until 
@@ -94,7 +89,6 @@ def get_letter_from_user(wrong_guesses_list, letter_dict):
 
 
 def build_word_dict(word):
-    # def build_word_dict(snowman_word):
     """This function takes snowman_word as input and returns 
     a dictionary with a key-value pair for each letter in 
     snowman_word where the key is the letter and the value is `False`.
@@ -107,7 +101,6 @@ def build_word_dict(word):
 
 
 def print_word_progress_string(word, letter_dict):
-    # def print_word_progress_string(snowman_word, snowman_word_dict):
     """
     This function takes the snowman_word and snowman_word_dict as input.
     It prints an output_string that shows the correct letter guess placements 
@@ -124,7 +117,6 @@ def print_word_progress_string(word, letter_dict):
 
 
 def get_word_progress(word, word_dict):
-    # def get_word_progress(snowman_word, snowman_word_dict):
     """
     This function takes the snowman_word and snowman_word_dict as input.
     It returns True if all the letters of the word have been guessed, and False otherwise.
