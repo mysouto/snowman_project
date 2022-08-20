@@ -1,3 +1,5 @@
+from wonderwords import RandomWord
+
 SNOWMAN_MIN_WORD_LENGTH = 5
 SNOWMAN_MAX_WORD_LENGTH = 8
 SNOWMAN_WRONG_GUESSES = 7
@@ -13,13 +15,20 @@ SNOWMAN_GRAPHIC = [
 ]
 
 
-def snowman(snowman_word):
+def snowman():
     """Complete the snowman function
     replace "pass" below with your own code
     It should print 'Congratulations, you win!'
     If the player wins and, 'Sorry, you lose! The word was {snowman_word}' if the player loses
     """
-    # secret/snowman word selected in main.py file
+    # in repl.it submission, snowman_word is generated in another file (main.py file)
+    # using wonderwords package below 
+    r = RandomWord()
+    snowman_word = r.word(
+        word_min_length=SNOWMAN_MIN_WORD_LENGTH,
+        word_max_length=SNOWMAN_MAX_WORD_LENGTH
+    )
+    # print(f"debug info: {snowman_word}")
 
     snowman_word_dict = build_word_dict(snowman_word)
     wrong_guesses_list = []
