@@ -134,3 +134,5 @@ def get_word_progress(word, word_dict):
         if word_dict[letter] == False:
             return False
     return True
+
+snowman()
